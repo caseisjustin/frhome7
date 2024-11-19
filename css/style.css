@@ -1,0 +1,530 @@
+@font-face {
+  font-family: "DMSANS";
+  src: url(../css/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: DMSANS, sans-serif;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1150px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+  background-color: #ddd;
+  opacity: 0.8;
+}
+
+.hdr_wrp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.hdr_wrp .hdr_nav_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.hdr_wrp .hdr_nav_list a {
+  color: #696871;
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.3s;
+  padding: 10px;
+  border-bottom: inherit solid 2px;
+}
+.hdr_wrp .hdr_nav_list a:hover {
+  color: #000;
+  border-bottom: #5454D4 solid 2px;
+}
+.hdr_wrp .burger_menu {
+  display: none;
+}
+.hdr_wrp button {
+  text-align: center;
+  padding: 20px 60px;
+  border-radius: 7px;
+  border: none;
+  background-color: #FF7143;
+  color: #fff;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.hdr_wrp button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.hero_wrp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+.hero_wrp .hero_desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 50%;
+}
+.hero_wrp .hero_desc h2 {
+  color: #19191B;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 77px;
+}
+.hero_wrp .hero_desc p {
+  color: #696871;
+  font-size: 20px;
+  line-height: 33px;
+}
+.hero_wrp .hero_desc button {
+  text-align: center;
+  padding: 20px 60px;
+  border-radius: 7px;
+  border: none;
+  background-color: #5454D4;
+  color: #fff;
+  font-weight: 700;
+  transition: 0.3s;
+  font-size: 17px;
+  font-weight: 700;
+}
+.hero_wrp .hero_desc button:hover {
+  opacity: 0.8;
+}
+.hero_wrp .hero_img {
+  width: 50%;
+  overflow: hidden;
+}
+
+.moderators {
+  width: 100%;
+  height: 80px;
+  padding: 10px 0;
+}
+.moderators .moder_wrp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub_indx {
+  width: 100%;
+  padding: 60px 0;
+}
+.sub_indx .sb_indx_wrp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.sub_indx .sb_indx_wrp .sb_indx_wrp_img {
+  width: 50%;
+}
+.sub_indx .sb_indx_wrp .sb_indx_wrp_txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 50%;
+}
+.sub_indx .sb_indx_wrp .sb_indx_wrp_txt h3 {
+  font-weight: 700;
+  font-size: 50px;
+}
+.sub_indx .sb_indx_wrp .sb_indx_wrp_txt p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #696871;
+}
+.sub_indx .sb_indx_wrp .sb_indx_wrp_txt a {
+  color: #5454D4;
+}
+
+.metrics {
+  width: 100%;
+  padding: 60px 0;
+}
+.metrics .metrics_wrp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.metrics .metrics_wrp .depth_mtrx_txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 50%;
+}
+.metrics .metrics_wrp .depth_mtrx_txt h3 {
+  font-weight: 700;
+  font-size: 50px;
+}
+.metrics .metrics_wrp .depth_mtrx_txt p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #696871;
+}
+.metrics .metrics_wrp .depth_mtrx_txt a {
+  color: #5454D4;
+}
+.metrics .metrics_wrp .metrics_img {
+  width: 50%;
+}
+
+.price__inf {
+  width: 100%;
+  padding: 60px 0;
+}
+.price__inf .pric__inf__wrp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price__inf .pric__inf__wrp .pr__inf_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.price__inf .pric__inf__wrp .pr__inf_item strong {
+  font-weight: 700;
+  font-size: 24px;
+  color: #19191B;
+}
+.price__inf .pric__inf__wrp .pr__inf_item p {
+  color: #696871;
+}
+
+.pricing {
+  width: 100%;
+  padding: 60px 0;
+}
+.pricing .prc_wrp {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.pricing .prc_wrp .prc_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.pricing .prc_wrp .prc_heading h2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #19191B;
+  width: 520px;
+}
+.pricing .prc_wrp .prc_heading .prc_heading_btns {
+  display: flex;
+}
+.pricing .prc_wrp .prc_heading .prc_heading_btns > :nth-child(1) {
+  text-align: center;
+  padding: 20px 60px;
+  border-radius: 7px;
+  border: none;
+  background-color: #FF7143;
+  color: #fff;
+  font-weight: 700;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #FF7143;
+}
+.pricing .prc_wrp .prc_heading .prc_heading_btns > :nth-child(2) {
+  text-align: center;
+  padding: 20px 60px;
+  border-radius: 7px;
+  border: none;
+  background-color: #FF7143;
+  color: #fff;
+  font-weight: 700;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #F8F8F8;
+  color: #19191B;
+}
+.pricing .prc_wrp .prc_heading .prc_heading_btns button:hover {
+  opacity: 0.8;
+}
+.pricing .prc_wrp .prc_plans {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+.pricing .prc_wrp .prc_plans .prc_plns_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.3333333333%;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  background-color: #F8F8F8;
+  padding: 30px 30px;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.pricing .prc_wrp .prc_plans .prc_plns_card h5 {
+  color: #696871;
+  font-size: 18px;
+}
+.pricing .prc_wrp .prc_plans .prc_plns_card b {
+  font-weight: 700;
+  font-size: 60px;
+}
+.pricing .prc_wrp .prc_plans .prc_plns_card ul li {
+  font-size: 17px;
+  color: #696871;
+  line-height: 50px;
+}
+.pricing .prc_wrp .prc_plans .prc_plns_card button {
+  text-align: center;
+  padding: 20px 60px;
+  border-radius: 7px;
+  border: none;
+  background-color: #FF7143;
+  color: #fff;
+  font-weight: 700;
+  background-color: #fff;
+  color: #5454D4;
+  transition: 0.3s;
+}
+.pricing .prc_wrp .prc_plans .prc_plns_card:hover {
+  background-color: #FF7143;
+  cursor: default;
+  color: #fff;
+}
+.pricing .prc_wrp .prc_plans .prc_plns_card:hover h5, .pricing .prc_wrp .prc_plans .prc_plns_card:hover b, .pricing .prc_wrp .prc_plans .prc_plns_card:hover button, .pricing .prc_wrp .prc_plans .prc_plns_card:hover ul li {
+  color: #fff;
+}
+.pricing .prc_wrp .prc_plans .prc_plns_card:hover button {
+  background-color: #9F3919;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 85%;
+  }
+  .hdr_wrp {
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hdr_wrp > img {
+    height: 2rem;
+  }
+  .hdr_wrp button {
+    display: none;
+  }
+  .hdr_wrp .hdr_nav_list a {
+    font-size: 0.8rem;
+  }
+  .hero_wrp .hero_desc > h2 {
+    font-size: 40px;
+  }
+  .hero_wrp .hero_desc > p {
+    font-size: 16px;
+  }
+  .hero_wrp .hero_desc > button {
+    padding: 15px 45px;
+  }
+  .sub_indx .sb_indx_wrp .sb_indx_wrp_img img {
+    width: 100%;
+    height: auto;
+  }
+  .sub_indx .sb_indx_wrp .sb_indx_wrp_txt h3 {
+    font-size: 40px;
+  }
+  .sub_indx .sb_indx_wrp .sb_indx_wrp_txt p {
+    font-size: 16px;
+  }
+  .sub_indx .sb_indx_wrp .sb_indx_wrp_txt a {
+    font-size: 16px;
+  }
+  .metrics .metrics_wrp .depth_mtrx_txt h3 {
+    font-size: 40px;
+  }
+  .metrics .metrics_wrp .depth_mtrx_txt p {
+    font-size: 16px;
+  }
+  .metrics .metrics_wrp .depth_mtrx_txt a {
+    font-size: 16px;
+  }
+  .metrics .metrics_wrp .metrics_img img {
+    width: 100%;
+    height: auto;
+  }
+  .price__inf .pric__inf__wrp .pr__inf_item strong {
+    font-size: 18px;
+  }
+  .price__inf .pric__inf__wrp .pr__inf_item p {
+    font-size: 12px;
+  }
+  .price__inf .pric__inf__wrp .pr__inf_item img {
+    width: 60%;
+  }
+  .pricing .prc_wrp .prc_heading h2 {
+    font-size: 40px;
+  }
+  .pricing .prc_wrp .prc_heading .prc_heading_btns button {
+    padding: 15px 45px;
+  }
+  .pricing .prc_wrp .prc_plans .prc_plns_card h2 {
+    font-size: 12px;
+  }
+  .pricing .prc_wrp .prc_plans .prc_plns_card b {
+    font-size: 40px;
+  }
+  .pricing .prc_wrp .prc_plans .prc_plns_card ul li {
+    font-size: 14px;
+  }
+}
+@media (max-width: 920px) {
+  .hdr_wrp .burger_menu {
+    display: block;
+  }
+  .hdr_wrp .burger_menu:hover {
+    cursor: pointer;
+  }
+  .hdr_wrp .hdr_nav_list {
+    display: none;
+  }
+  .hero_wrp {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .hero_wrp .hero_desc {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  .hero_wrp .hero_img {
+    width: 100%;
+  }
+  .hero_wrp .hero_img > img {
+    width: 100%;
+    height: auto;
+  }
+  .moderators .moder_wrp {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .moderators .moder_wrp img {
+    height: 20px;
+  }
+  .sub_indx {
+    padding: 100px 0;
+  }
+  .sub_indx .sb_indx_wrp {
+    flex-direction: column;
+  }
+  .sub_indx .sb_indx_wrp .sb_indx_wrp_txt {
+    align-items: center;
+    text-align: center;
+  }
+  .metrics .metrics_wrp {
+    flex-direction: column;
+  }
+  .metrics .metrics_wrp .depth_mtrx_txt {
+    align-items: center;
+    text-align: center;
+  }
+  .price__inf .pric__inf__wrp {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .price__inf .pric__inf__wrp .pr__inf_item {
+    width: 50%;
+  }
+  .pricing .prc_wrp .prc_heading {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+  }
+  .pricing .prc_wrp .prc_plans {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pricing .prc_wrp .prc_plans .prc_plns_card {
+    width: 45%;
+  }
+  .pricing .prc_wrp .prc_plans .prc_plns_card button {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .hdr_wrp > :nth-child(1) {
+    height: 20px;
+  }
+  .pricing .prc_wrp .prc_plans {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pricing .prc_wrp .prc_plans .prc_plns_card {
+    width: 85%;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .pricing .prc_wrp .prc_plans .prc_plns_card h5 {
+    font-size: 10px;
+  }
+  .pricing .prc_wrp .prc_plans .prc_plns_card b {
+    font-size: 20px;
+  }
+  .pricing .prc_wrp .prc_plans .prc_plns_card ul li {
+    font-size: 10px;
+  }
+  .pricing .prc_wrp .prc_plans .prc_plns_card button {
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

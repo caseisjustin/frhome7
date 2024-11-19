@@ -1,0 +1,15 @@
+@mixin flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin prmBtn($clr: $prmOrange){
+    text-align: center;
+    padding: 20px 60px;
+    border-radius: 7px;
+    border: none;
+    background-color: $clr;
+    color: #fff;
+    font-weight: 700;
+}
